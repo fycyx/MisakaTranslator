@@ -39,6 +39,7 @@ namespace TranslatorLibrary
             { "DeepL", "DeepLTranslator"},
             {"ChatGPT","ChatGPTTranslator" },
             { "Azure OpenAI", nameof(AzureOpenAITranslator) },
+            { "第三方自定义接口", nameof(CustomOpenAITranslator) },
             { "本地人工翻译(见说明)" , "ArtificialTranslator"}
         };
 

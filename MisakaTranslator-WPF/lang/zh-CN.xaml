@@ -65,6 +65,7 @@
     <sys:String x:Key="SettingsMenu_TranslatorSettings_DeepL">DeepL</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_ChatGPT">ChatGPT</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_AzureOpenAI">Azure OpenAI</sys:String>
+    <sys:String x:Key="SettingsMenu_TranslatorSettings_CustomOpenAI">第三方自定义接口</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_IBM">IBM</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_Yandex">Yandex</sys:String>
 
@@ -84,7 +85,7 @@
     <sys:String x:Key="GeneralTransSettingsPage_EachRowTransCheckBox">使用分行翻译</sys:String>
     <sys:String x:Key="GeneralTransSettingsPage_TransSourceHint">注意：如果同时使用多个在线API，可能会影响效率</sys:String>
     <sys:String x:Key="GeneralTransSettingsPage_EachRowTransHint">不使用分行翻译时，软件会将读取到的文本合并成一句话翻译，对于部分游戏可以提高翻译质量。</sys:String>
-
+    
     <sys:String x:Key="BaiduTransSettingsPage_Introduce">百度翻译API支持28种语言互译，对英语、日语、汉语的互译支持较好，需要联网使用；您需要先申请百度翻译API并开通翻译服务，获取appID和密钥后填入下方相应位置并进行测试认证，注意本项与百度智能云OCR不在同一个地方注册；如果认证出现错误，请根据错误码至百度翻译API官方获取解决办法；百度翻译API部分版本可能会产生某些费用，您可以使用额度查询按钮进入控制台确认。</sys:String>
     <sys:String x:Key="BaiduTransSettingsPage_appID">百度翻译API appID</sys:String>
     <sys:String x:Key="BaiduTransSettingsPage_secretKey">百度翻译API 密钥</sys:String>
@@ -99,6 +100,19 @@
     <sys:String x:Key="AzureOpenAITransSettingsPage_Introduce">Azure OpenAI人工智能翻译，基本和ChatGPT一致</sys:String>
     <sys:String x:Key="AzureOpenAITransSettingsPage_secretKey">Deployment 密钥</sys:String>
     <sys:String x:Key="AzureOpenAITransSettingsPage_apiUrl">Deployment 目标URL</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_Introduce">第三方自定义接口用于连接 Ollama、LM Studio、vLLM、llama.cpp server 等兼容 OpenAI Chat Completions 格式的本地或远程服务。API Key 可留空，Base URL 可填写 http://127.0.0.1:11434/v1 或完整的 /chat/completions 地址。</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_BaseUrl">API Base URL</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_ApiKey">API Key</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_ModelName">Model Name</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_PromptTemplate">Prompt Template（使用 {text} 表示待翻译文本）</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_Temperature">Temperature</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_GetModels">获取模型列表</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_Test">测试接口</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_GetModelsSuccess">模型列表获取成功</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_GetModelsError">模型列表获取失败</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_TestError">第三方自定义接口测试失败</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_PlaceholderHint">Prompt Template 未包含 {text}，翻译时将自动在末尾追加原文。</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_TestSrcText">测试翻译源文本</sys:String>
 
     <sys:String x:Key="TencentOldTransSettingsPage_Introduce">腾讯翻译(私人)API支持多种语言互译，对日语、汉语的Galgame互译支持较好，需要联网使用；您需要先申请该API并创建一个密钥，获取SecretId和SecretKey后填入下方相应位置并进行测试认证；如果认证出现错误，请根据错误码至腾讯翻译API官方文档获取解决办法；腾讯旧版翻译API部分版本可能会产生某些费用，您可以使用额度查询按钮进入控制台确认。</sys:String>
     <sys:String x:Key="TencentOldTransSettingsPage_SecretId">腾讯云API SecretId</sys:String>

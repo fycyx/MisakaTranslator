@@ -67,6 +67,7 @@
     <sys:String x:Key="SettingsMenu_TranslatorSettings_DeepL">DeepL</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_ChatGPT">ChatGPT</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_AzureOpenAI">Azure OpenAI</sys:String>
+    <sys:String x:Key="SettingsMenu_TranslatorSettings_CustomOpenAI">Third-party custom interface</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_IBM">IBM</sys:String>
     <sys:String x:Key="SettingsMenu_TranslatorSettings_Yandex">Yandex</sys:String>
 
@@ -86,7 +87,7 @@
     <sys:String x:Key="GeneralTransSettingsPage_EachRowTransCheckBox">Enable sentence-break</sys:String>
     <sys:String x:Key="GeneralTransSettingsPage_TransSourceHint">Note: Translation takes longer if you use multiple online APIs at the same time.</sys:String>
     <sys:String x:Key="GeneralTransSettingsPage_EachRowTransHint">When disabled, the Translator combines all texts into one sentence. This improves translation quality for some games.</sys:String>
-
+    
     <sys:String x:Key="BaiduTransSettingsPage_Introduce">Baidu Translate (百度翻译, network required) supports inter-translation for 28 languages; among them English, Japanese, Chinese translation is better. You need to apply for the API and activate translation services (on the website in Chinese), get access to the appID and key, and then fill in below before testing. If the API is tested as invalid, you can refer to official Baidu documentations with the error codes. It is likely to incur charges, &quot;Check API quota&quot; will lead you to the dashboard of Baidu Translate.</sys:String>
     <sys:String x:Key="BaiduTransSettingsPage_appID">API appID</sys:String>
     <sys:String x:Key="BaiduTransSettingsPage_secretKey">API key</sys:String>
@@ -101,6 +102,19 @@
     <sys:String x:Key="AzureOpenAITransSettingsPage_Introduce">Azure OpenAI (network required) provides AI Translat, basically consistent with ChatGPT</sys:String>
     <sys:String x:Key="AzureOpenAITransSettingsPage_secretKey">Deployment Key</sys:String>
     <sys:String x:Key="AzureOpenAITransSettingsPage_apiUrl">Deployment target URL</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_Introduce">Connect local or remote OpenAI-compatible Chat Completions services such as Ollama, LM Studio, vLLM, and llama.cpp server. API Key can be empty. Base URL can be http://127.0.0.1:11434/v1 or a full /chat/completions URL.</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_BaseUrl">API Base URL</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_ApiKey">API Key</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_ModelName">Model Name</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_PromptTemplate">Prompt Template (use {text} for source text)</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_Temperature">Temperature</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_GetModels">Get models</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_Test">Test interface</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_GetModelsSuccess">Models loaded</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_GetModelsError">Failed to load models</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_TestError">Third-party custom interface test failed</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_PlaceholderHint">Prompt Template does not contain {text}. The source text will be appended automatically.</sys:String>
+    <sys:String x:Key="CustomOpenAITransSettingsPage_TestSrcText">Test translation source text</sys:String>
 
 
     <sys:String x:Key="TencentOldTransSettingsPage_Introduce">Tencent TMT API (腾讯云翻译, network required) supports multilingual translation with better support for Japanese and Chinese. You need to apply for the API (on the website in Chinese), get access to the SecretId and SecretKey, and then fill in below before testing. If the API is tested as invalid, you can refer to official Tencent documentations with the error codes. Previous version of API is likely to incur charges, &quot;Check API quota&quot; will lead you to the dashboard of Tencent TMT.</sys:String>

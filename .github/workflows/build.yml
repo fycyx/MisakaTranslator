@@ -1,16 +1,35 @@
 name: CI
+
 on:
   push:
-    branches: [master]
+    branches: [master, main]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-dotnet@v3
-    - run: dotnet build
-    - uses: actions/upload-artifact@master
-      with:
-        path: MisakaTranslator-WPF/bin
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore MisakaTranslator.sln
+
+      - name: Build net472 only
+        run: msbuild MisakaTranslator.sln /p:Configuration=Release /p:TargetFramework=net472 /m
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MisakaTranslator-WPF-net472
+          path: |
+            MisakaTranslator-WPF/bin/Release/net472/**
+            MisakaTranslator-WPF/bin/Release/**

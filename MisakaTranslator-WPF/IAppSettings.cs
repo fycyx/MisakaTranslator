@@ -142,6 +142,41 @@ namespace MisakaTranslator_WPF
             set;
         }
 
+        [Option(Alias = "CustomOpenAITranslator.BaseUrl", DefaultValue = "http://127.0.0.1:11434/v1")]
+        string CustomOpenAIBaseUrl
+        {
+            get;
+            set;
+        }
+
+        [Option(Alias = "CustomOpenAITranslator.ApiKey", DefaultValue = "")]
+        string CustomOpenAIApiKey
+        {
+            get;
+            set;
+        }
+
+        [Option(Alias = "CustomOpenAITranslator.ModelName", DefaultValue = "")]
+        string CustomOpenAIModelName
+        {
+            get;
+            set;
+        }
+
+        [Option(Alias = "CustomOpenAITranslator.PromptTemplate", DefaultValue = "<|im_start|>system\n你是一个轻小说翻译模型...\n<|im_end|>\n<|im_start|>user\n将下面的日文文本翻译成中文：{text}\n<|im_end|>\n<|im_start|>assistant")]
+        string CustomOpenAIPromptTemplate
+        {
+            get;
+            set;
+        }
+
+        [Option(Alias = "CustomOpenAITranslator.Temperature", DefaultValue = 0.2)]
+        double CustomOpenAITemperature
+        {
+            get;
+            set;
+        }
+
         [Option(Alias = "XiaoniuTranslator.xiaoniuApiKey", DefaultValue = "")]
         string xiaoniuApiKey
         {

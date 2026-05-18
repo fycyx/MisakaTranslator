@@ -270,6 +270,15 @@ namespace MisakaTranslator_WPF
                     AzureOpenAITranslator azureOpenAI = new AzureOpenAITranslator();
                     azureOpenAI.TranslatorInit(Common.appSettings.AzureOpenAIApiKey, Common.appSettings.AzureOpenAIApiUrl);
                     return azureOpenAI;
+                case nameof(CustomOpenAITranslator):
+                    CustomOpenAITranslator customOpenAI = new CustomOpenAITranslator();
+                    customOpenAI.Configure(
+                        Common.appSettings.CustomOpenAIApiKey,
+                        Common.appSettings.CustomOpenAIBaseUrl,
+                        Common.appSettings.CustomOpenAIModelName,
+                        Common.appSettings.CustomOpenAIPromptTemplate,
+                        Common.appSettings.CustomOpenAITemperature);
+                    return customOpenAI;
                 case "ArtificialTranslator":
                     ArtificialTranslator at = new ArtificialTranslator();
                     at.TranslatorInit(Common.appSettings.ArtificialPatchPath);
